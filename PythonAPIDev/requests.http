@@ -1,0 +1,44 @@
+###
+GET http://127.0.0.1:8000
+
+###
+GET http://127.0.0.1:8000/v1/posts
+
+###
+GET http://127.0.0.1:8000/v1/posts/1
+
+###
+GET http://127.0.0.1:8000/v1/posts/2a
+###
+GET http://127.0.0.1:8000/v1/posts/5
+
+
+###
+POST http://127.0.0.1:8000/v1/posts
+content-type: application/json
+
+{
+    "title":"good music",
+    "content":"The Hu Bar",
+    "published": false,
+    "rating": 6,
+    "postType": "music"
+}
+
+###
+GET http://127.0.0.1:8000/v1/posts/2
+
+###
+PUT http://127.0.0.1:8000/v1/posts/2
+content-type: application/json
+
+{
+    "title":"excelent music",
+    "content":"The Hu Bar",
+    "published": false,
+    "rating": 6,
+    "postType": "music"
+}
+
+###
+DELETE http://127.0.0.1:8000/v1/posts/2
